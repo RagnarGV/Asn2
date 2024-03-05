@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+{{#each content}}
+  <p>Title : {{this.title}}</p>
+  <p>Author : {{this.author}}</p>
+  <p>Price : {{this.price}}</p>
+  <p>pages : {{this.pages}}</p>
+  <p>avg_reviews : {{this.avg_reviews}}</p>
+  <p>n_reviews : {{this.n_reviews}}</p>
+  <p>star : {{this.star}}</p>
+  <p>dimensions : {{this.dimensions}}</p>
+  <p>weight : {{this.weight}}</p>
+  <p>language : {{this.language}}</p>
+  <p>publisher : {{this.publisher}}</p>
+  <p>ISBN_13 : {{this.ISBN_13}}</p>
+  <a href="{{this.complete_link}}">complete_link :
+    {{this.complete_link}}</a>
+{{/each}}

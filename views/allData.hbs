@@ -1,0 +1,68 @@
+<h1>{{title}}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Title
+      </th>
+      <th>
+        Author
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        pages
+      </th>
+      <th>
+        avg_reviews
+      </th>
+      <th>
+        n_reviews
+      </th>
+      <th>
+        star
+      </th>
+      <th>
+        dimensions
+      </th>
+      <th>
+        weight
+      </th>
+      <th>
+        language
+      </th>
+      <th>
+        publisher
+      </th>
+      <th>
+        ISBN_13
+      </th>
+      <th>
+        complete_link
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each content}}
+      {{!-- {{#if this.avg_reviews}} --}}
+      <tr class="{{#unless avg_reviews}}table-danger{{/unless}}">
+        <td>{{this.title}}</td>
+        <td>Author : {{this.author}}</td>
+        <td>Price : {{this.price}}</td>
+        <td>pages : {{this.pages}}</td>
+        <td>avg_reviews : {{modifyAvgReviews this.avg_reviews}}</td>
+        <td>n_reviews : {{this.n_reviews}}</td>
+        <td>star : {{this.star}}</td>
+        <td>dimensions : {{this.dimensions}}</td>
+        <td>weight : {{this.weight}}</td>
+        <td>language : {{this.language}}</td>
+        <td>publisher : {{this.publisher}}</td>
+        <td>ISBN_13 : {{this.ISBN_13}}</td>
+        <td><a href="{{this.complete_link}}">
+            {{this.complete_link}}</a></td>
+      </tr>
+      {{!-- {{/if}} --}}
+    {{/each}}
+  </tbody>
+</table>
